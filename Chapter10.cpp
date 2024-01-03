@@ -213,10 +213,93 @@ Chapter 10 Operator Overloading!!!!!!
 
         operator ++ (d1, 0)
 
-    The prototype fot this function would be Date operato++(Date&, int);
+    The prototype fot this function would be Date operator++(Date&, int);
 
 
         Date study class
 
+        phone << cout;
+        phonbe >>  cin;
+
+        Overloaded input and output operators are declared as friends if they need to access 
+        nonpublic class members directly for preformance or because the class may not offer
+        appropriate get functions.
+
+    The overloaded << stream insertion is used when the left operand has the type of ostream&
+        and the overloaded >> stream extraction operand is used when the left operand has the type of istream&
+
+
+        so overloaded opperators need acess to the class itself as the right operand wher the left opperand is a non user defined type
+        like istream& or ostream&,  so for this reason they must be non member functions, aslo wehn doing a operoator overload
+        in oreder to give the overloaded functions acess to the private datamembers thy can be declared as freidn fucntions of a cclass
+        "for peformznce reasons"
+
+        A unary operator for a class can be overloaded as a nonstatic member function wih no arguments or as a non mmberfunction with 
+        one argument that must be an object or a referance to an object of the class...
+
+
+        Unary overloaded Operator 
+
+        Operators must be nonstatic so that they can access the nonstatic data in each object of the class
+        int * gradesArray{new int [10]}
+
+        Dyanamic Memory Management Engine ans how to do the best work with these tool is the thing that i need to work on lately
+        theres a lot of work that goes into the completion of daily tasts that i am brushing over and decidijng to negelet for some
+        reasone?
+
+overloading the post icrememnt operarot presents a challege, because the compiler must
+    
+    
+    
+    
+    
+    
+    ----------------------------------------------------------------------------------------------
+
+
+Dynamic Memory Managemet 
+
+        Allows you to controll the allocation and dellocation of memory in a a program for objects and
+            for object arrays of any build in or user defined type.
+
+    
+
+    new     --- "Time* timePtr{new Time};"
+        operator that reserves the exact memory ammont for a object
+        this is creatred in the 
+
+            Free store
+                Also known as the 
+                    
+                    Heap 
+                        A reigon of memory assigned to each program for storing dynamicly allocated objects
+
+        And once memory is allocated with new you can acess it with the pointer retured by the new operator.
+
+    delete  --- "delete timePtr;"
+        operator that deletes better know as deallocates memory at the pointer adress specified (lvalue) whatever
+
+    ---Before you ask yes the new and delete operators can be overloaded but this is beyond the scope of this book!
+
+    ---memory leaks are when a program does not release its memory causing a premature loss of storage!
+
+    ---Do not delete memory that was allocated by new doing so creates undefined behavior.
+
+    ---After deleting a block of memory be sure to not delete the block of memory again to avoid this set the
+        Pointer to the memory as a null pointer because using the delete operator on a nullPtr has no effect.
+
+
+        Initializing Dynamic Memory
+            "double* pt{new double{3.14159}};"
+                This initlaizes a double to the number then creates a new pointer and assignes that to the double* of ptr
+            
+        
+    
+    
+    
+    
+    
+    
+    
     
     */

@@ -12,6 +12,9 @@ int main(){
 
 int main(){
     std::cout << "Debug is not defined";
+    int x = 5;
+    x = ++x + ++x;
+    std::cout << x;
     return 0;
 }   
 
